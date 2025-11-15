@@ -24,6 +24,7 @@ class MyTokenObtainPairView(TokenObtainPairView):
         
 @api_view(['POST'])
 def registerUser(request):
+    
      if request.method == 'POST':
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
