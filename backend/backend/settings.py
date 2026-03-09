@@ -206,19 +206,34 @@ redis_host = env.str("REDIS_HOST", default=None)
 redis_port = env.str("REDIS_PORT", default=None)
 
 if redis_host and redis_port:
+    redis_url = f"redis://{redis_host}:{redis_port}/0"
+    
     CHANNEL_LAYERS = {
         "default": {
             "BACKEND": "channels_redis.core.RedisChannelLayer",
             "CONFIG": {
-                "hosts": [f"redis://{redis_host}:{redis_port}/0"],
+                "hosts": [redis_url],
             },
         },
     }
     
-    CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", default=f"redis://{redis_host}:{redis_port}/0")
-    CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", default=f"redis://{redis_host}:{redis_port}/0")
+    CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", default=redis_url)
+    CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", default=redis_url)
     
     CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
+
+    # Add Django cache configuration using Redis
+    CACHES = {
+        "default": {
+            "BACKEND": "django_redis.cache.RedisCache",
+            "LOCATION": redis_url,
+            "OPTIONS": {
+                "CLIENT_CLASS": "django_redis.client.DefaultClient",
+                # Optional: compression, password, socket timeout, etc.
+            }
+        }
+    }
+
 else:
     # Fallback to in-memory channel layer
     CHANNEL_LAYERS = {
@@ -228,6 +243,13 @@ else:
     }
     CELERY_TASK_ALWAYS_EAGER = True
     CELERY_TASK_STORE_EAGER_RESULT = False
+
+    # Use local-memory cache fallback
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache"
+        }
+    }
     
 
 
