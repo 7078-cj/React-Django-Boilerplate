@@ -1,4 +1,4 @@
-redis: redis-server --protected-mode yes --bind 127.0.0.1
+redis: redis-server --port 6379 --bind 127.0.0.1 --protected-mode yes
 web: ./executables/start_web.sh
 worker: celery -A backend worker --loglevel=info --pool=solo
 beat: ./executables/start_beat.sh
