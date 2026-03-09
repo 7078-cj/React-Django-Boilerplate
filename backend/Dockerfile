@@ -1,21 +1,32 @@
-# Use lightweight Python image
-FROM python:3.12-alpine
+FROM python:3.12-slim
 
-# Prevent Python from buffering stdout/stderr
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
-# Set working directory
 WORKDIR /django
 
-# Copy requirements and install
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Install build tools + Redis + dos2unix
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    python3-dev \
+    gfortran \
+    dos2unix \
+    redis-server \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy project code
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install honcho
+
+# Copy project files
 COPY . .
 
-# Expose the port the Django app will run on
-EXPOSE 8000
+# Normalize line endings & make scripts executable
+RUN dos2unix ./executables/start_web.sh && chmod +x ./executables/start_web.sh
+RUN dos2unix ./executables/start_beat.sh && chmod +x ./executables/start_beat.sh
 
-# Run database migrations and start the server
-CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+# Expose ports
+EXPOSE 8000 6379
+
+# Use Honcho to run all processes
+CMD ["honcho", "start", "-f", "Procfile"]

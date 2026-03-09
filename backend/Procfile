@@ -1,0 +1,4 @@
+redis: redis-server --protected-mode no
+web: ./executables/start_web.sh
+worker: celery -A backend worker --loglevel=info --pool=solo
+beat: ./executables/start_beat.sh

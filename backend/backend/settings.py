@@ -14,6 +14,8 @@ from pathlib import Path
 from datetime import timedelta
 import environ
 import os
+from celery.schedules import crontab
+from .scheduler import SCHEDULE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,7 +53,9 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'api',
     'websocket',
-    'corsheaders'
+    'corsheaders',
+    'tasks',
+    'django_celery_beat'    
 ]
 
 REST_FRAMEWORK = {
@@ -198,8 +202,8 @@ CORS_ALLOWED_ORIGINS = env.list(
 )
 CORS_ALLOW_CREDENTIALS = True
 
-redis_host = os.getenv("REDIS_HOST")
-redis_port = os.getenv("REDIS_PORT")
+redis_host = env.str("REDIS_HOST", default=None)
+redis_port = env.str("REDIS_PORT", default=None)
 
 if redis_host and redis_port:
     CHANNEL_LAYERS = {
@@ -210,6 +214,11 @@ if redis_host and redis_port:
             },
         },
     }
+    
+    CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", default=f"redis://{redis_host}:{redis_port}/0")
+    CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", default=f"redis://{redis_host}:{redis_port}/0")
+    
+    CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 else:
     # Fallback to in-memory channel layer
     CHANNEL_LAYERS = {
@@ -217,3 +226,18 @@ else:
             "BACKEND": "channels.layers.InMemoryChannelLayer"
         }
     }
+    CELERY_TASK_ALWAYS_EAGER = True
+    CELERY_TASK_STORE_EAGER_RESULT = False
+    
+
+
+
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_TIMEZONE = "UTC"
+
+#schduler
+CELERY_BEAT_SCHEDULE = SCHEDULE
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
+
