@@ -3,7 +3,7 @@ FROM python:3.12-slim
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /django
-ENV PYTHONPATH=/django/backend
+ENV PYTHONPATH=/django
 # Install build tools + Redis + dos2unix
 RUN apt-get update && apt-get install -y \
     build-essential \
