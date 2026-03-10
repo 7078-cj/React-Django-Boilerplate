@@ -2,11 +2,12 @@ from django.shortcuts import render
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, throttle_classes
 from ..serializers import UserSerializer
 import os
 from django.conf import settings
-
+from rest_framework.throttling import AnonRateThrottle
+from ..rate_limit.TestThrottle import TestThrottle
 
 # Create your views here.
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -34,6 +35,7 @@ def registerUser(request):
         return Response(serializer.errors, status=400)
 
 @api_view(['GET'])
+@throttle_classes([TestThrottle])
 def test(request):
     
     return Response('Hello')
