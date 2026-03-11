@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import AuthContext from '../Contexts/AuthContext'
+import { useDispatch } from "react-redux";
+import { loginUser } from '../utils/auth';
 
 function Login() {
-  let { loginUser } = useContext(AuthContext)
+  const dispatch = useDispatch()
   const nav = useNavigate()
+
 
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -14,7 +16,8 @@ function Login() {
       <div className="flex-1 flex justify-center items-center p-6">
         <div className="w-full max-w-md bg-white shadow-md rounded-lg p-8">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
-          <form onSubmit={loginUser} className="flex flex-col space-y-4">
+          
+          <form onSubmit={(e)=>loginUser(e,dispatch,nav)} className="flex flex-col space-y-4">
             <label className="flex flex-col text-gray-700 font-medium">
               Username
               <input

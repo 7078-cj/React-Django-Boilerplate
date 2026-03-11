@@ -1,37 +1,53 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
-import Login from './Pages/Login'
-import PrivateRoutes from './Contexts/PrivateRoutes'
-import Register from './Pages/Register'
-import { AuthProvider } from './Contexts/AuthContext'
-import DashBoard from './Pages/DashBoard'
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import DashBoard from "./pages/DashBoard";
+
+import PrivateRoutes from "./contexts/PrivateRoutes";
+import { updateToken } from "./utils/auth";
 
 
+function AppContent() {
 
-function App() {
-  
+  const dispatch = useDispatch();
+  const tokens = useSelector((state) => state.auth.tokens);
+
+  useEffect(() => {
+
+    if (!tokens) return;
+
+    const interval = setInterval(() => {
+      updateToken(dispatch);
+    }, 600000);
+
+    return () => clearInterval(interval);
+
+  }, [tokens]);
+
   return (
-    <>
-      
-      <Router>
-        <AuthProvider>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-              
-            <Route element={<PrivateRoutes />} >
-              <Route path="/" element={<DashBoard />} />
-            </Route>
-              
-          </Routes>
-        </AuthProvider>
-      </Router>
-      
-      
-      
-    </>
-  )
+    <Router>
+
+      <Routes>
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        <Route element={<PrivateRoutes />}>
+          <Route path="/" element={<DashBoard />} />
+        </Route>
+
+      </Routes>
+
+    </Router>
+  );
 }
 
-export default App
+
+export default function App() {
+  return (
+      <AppContent />
+  );
+}

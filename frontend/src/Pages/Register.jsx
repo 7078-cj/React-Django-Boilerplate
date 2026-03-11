@@ -1,43 +1,18 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-import AuthContext from '../Contexts/AuthContext';
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../utils/auth';
 
 
 function Register() {
+    const dispatch = useDispatch()
     const nav = useNavigate()
-    let {loginUser} = useContext(AuthContext)
-
-    var RegisterUser = async(e) =>{
-        e.preventDefault();
-        const url = import.meta.env.VITE_API_URL
-
-        let response = await fetch(
-          `${url}register/`,{
-            method: "POST",
-            headers:{
-              'Content-Type' : 'application/json',
-             
-            },
-            body :JSON.stringify({
-                                  'username' :e.target.username.value,
-                                    'email':e.target.email.value,
-                                  'password' :e.target.password.value,
-                                  
-                                  })
-          }
-        )
-        let data = await response.json()
-                
-                if (response.status ==200){
-                  loginUser(e)
-                  nav('/')
-      }
-    }
+    
   return (
     <div className='flex flex-col justify-center items-center h-screen'>
       <div className="w-full max-w-md bg-white shadow-md rounded-lg p-8">
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Register</h2>
-        <form onSubmit={RegisterUser} className="flex flex-col space-y-4">
+        <form onSubmit={(e) => registerUser(e, dispatch, nav)} className="flex flex-col space-y-4">
           <label className="flex flex-col text-gray-700 font-medium">
                 Username
                 <input
@@ -73,7 +48,7 @@ function Register() {
       </form>
      <p className="mt-4 text-center text-gray-600 text-sm">
             Already have an account?{' '}
-            <a href="/register" className="text-cyan-500 hover:underline">
+            <a href="/login" className="text-cyan-500 hover:underline">
               Login
             </a>
           </p>

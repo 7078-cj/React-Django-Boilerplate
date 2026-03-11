@@ -1,0 +1,1124 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleRateThrottle",
+        "importPath": "rest_framework.throttling",
+        "description": "rest_framework.throttling",
+        "isExtraImport": true,
+        "detail": "rest_framework.throttling",
+        "documentation": {}
+    },
+    {
+        "label": "AnonRateThrottle",
+        "importPath": "rest_framework.throttling",
+        "description": "rest_framework.throttling",
+        "isExtraImport": true,
+        "detail": "rest_framework.throttling",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairSerializer",
+        "importPath": "rest_framework_simplejwt.serializers",
+        "description": "rest_framework_simplejwt.serializers",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "throttle_classes",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "ProtocolTypeRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "URLRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "websocket_urlpatterns",
+        "importPath": "websocket.routing",
+        "description": "websocket.routing",
+        "isExtraImport": true,
+        "detail": "websocket.routing",
+        "documentation": {}
+    },
+    {
+        "label": "Celery",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "environ",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "environ",
+        "description": "environ",
+        "detail": "environ",
+        "documentation": {}
+    },
+    {
+        "label": "crontab",
+        "importPath": "celery.schedules",
+        "description": "celery.schedules",
+        "isExtraImport": true,
+        "detail": "celery.schedules",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncWebsocketConsumer",
+        "importPath": "channels.generic.websocket",
+        "description": "channels.generic.websocket",
+        "isExtraImport": true,
+        "detail": "channels.generic.websocket",
+        "documentation": {}
+    },
+    {
+        "label": "database_sync_to_async",
+        "importPath": "channels.db",
+        "description": "channels.db",
+        "isExtraImport": true,
+        "detail": "channels.db",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "backend.api.migrations.0001_initial",
+        "description": "backend.api.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Test',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=30, unique=True)),",
+        "detail": "backend.api.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "TestThrottle",
+        "kind": 6,
+        "importPath": "backend.api.rate_limit.TestThrottle",
+        "description": "backend.api.rate_limit.TestThrottle",
+        "peekOfCode": "class TestThrottle(SimpleRateThrottle):\n    scope = \"test\"\n    # Define the rate here directly instead of using settings.py\n    rate = \"5/min\" \n    def get_cache_key(self, request, view):\n        if request.user and request.user.is_authenticated:\n            ident = request.user.id\n        else:\n            ident = self.get_ident(request)\n        return self.cache_format % {",
+        "detail": "backend.api.rate_limit.TestThrottle",
+        "documentation": {}
+    },
+    {
+        "label": "Test",
+        "kind": 6,
+        "importPath": "backend.api.user.models",
+        "description": "backend.api.user.models",
+        "peekOfCode": "class Test(models.Model):\n    name = models.CharField(max_length=30, unique=True)\n    description = models.TextField(default=\"set a description\")\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.name",
+        "detail": "backend.api.user.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "kind": 6,
+        "importPath": "backend.api.user.serializers",
+        "description": "backend.api.user.serializers",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n       model = User\n       fields = ('id', 'username', 'email', 'password')\n       extra_kwargs = {'password': {'write_only': True}}\n    def create(self, validated_data):\n        user = User.objects.create_user(\n            username=validated_data['username'],\n            email=validated_data['email'],\n            password=validated_data['password'],",
+        "detail": "backend.api.user.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "backend.api.user.urls",
+        "description": "backend.api.user.urls",
+        "peekOfCode": "urlpatterns = [\n    path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),\n    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),\n    path('register/', registerUser, name='register_user'),\n    path('test/', test, name='test'),\n]",
+        "detail": "backend.api.user.urls",
+        "documentation": {}
+    },
+    {
+        "label": "MyTokenObtainPairSerializer",
+        "kind": 6,
+        "importPath": "backend.api.user.views",
+        "description": "backend.api.user.views",
+        "peekOfCode": "class MyTokenObtainPairSerializer(TokenObtainPairSerializer):\n    @classmethod\n    def get_token(cls, user):\n        token = super().get_token(user)\n        token['username'] = user.username\n        return token\nclass MyTokenObtainPairView(TokenObtainPairView):\n    serializer_class = MyTokenObtainPairSerializer\n@api_view(['POST'])\ndef registerUser(request):",
+        "detail": "backend.api.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "MyTokenObtainPairView",
+        "kind": 6,
+        "importPath": "backend.api.user.views",
+        "description": "backend.api.user.views",
+        "peekOfCode": "class MyTokenObtainPairView(TokenObtainPairView):\n    serializer_class = MyTokenObtainPairSerializer\n@api_view(['POST'])\ndef registerUser(request):\n    serializer = UserSerializer(data=request.data)\n    if serializer.is_valid():\n        serializer.save()\n        return Response(\n            {\"message\": \"User registered successfully\"},\n            status=status.HTTP_201_CREATED",
+        "detail": "backend.api.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "registerUser",
+        "kind": 2,
+        "importPath": "backend.api.user.views",
+        "description": "backend.api.user.views",
+        "peekOfCode": "def registerUser(request):\n    serializer = UserSerializer(data=request.data)\n    if serializer.is_valid():\n        serializer.save()\n        return Response(\n            {\"message\": \"User registered successfully\"},\n            status=status.HTTP_201_CREATED\n        )\n    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n@api_view(['GET'])",
+        "detail": "backend.api.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "backend.api.user.views",
+        "description": "backend.api.user.views",
+        "peekOfCode": "def test(request):\n    return Response('Hello')",
+        "detail": "backend.api.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "ApiConfig",
+        "kind": 6,
+        "importPath": "backend.api.apps",
+        "description": "backend.api.apps",
+        "peekOfCode": "class ApiConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'api'",
+        "detail": "backend.api.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "backend.api.urls",
+        "description": "backend.api.urls",
+        "peekOfCode": "urlpatterns = [\n     path('user/', include('api.user.urls')),  # note the dot-style import\n]",
+        "detail": "backend.api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "http_response_app",
+        "kind": 5,
+        "importPath": "backend.backend.asgi",
+        "description": "backend.backend.asgi",
+        "peekOfCode": "http_response_app = get_asgi_application()\napplication = ProtocolTypeRouter({\n    \"http\": http_response_app,\n    \"websocket\": URLRouter(websocket_urlpatterns),\n})",
+        "detail": "backend.backend.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "backend.backend.asgi",
+        "description": "backend.backend.asgi",
+        "peekOfCode": "application = ProtocolTypeRouter({\n    \"http\": http_response_app,\n    \"websocket\": URLRouter(websocket_urlpatterns),\n})",
+        "detail": "backend.backend.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.backend.celery_app",
+        "description": "backend.backend.celery_app",
+        "peekOfCode": "app = Celery(\"backend\")\napp.config_from_object(\"django.conf:settings\", namespace=\"CELERY\")\napp.autodiscover_tasks()",
+        "detail": "backend.backend.celery_app",
+        "documentation": {}
+    },
+    {
+        "label": "SCHEDULE",
+        "kind": 5,
+        "importPath": "backend.backend.scheduler",
+        "description": "backend.backend.scheduler",
+        "peekOfCode": "SCHEDULE = {\n    \"print-time-every-10-seconds\": {\n        \"task\": \"tasks.tasks.test_task\",\n        \"schedule\": 10.0,\n    },\n}",
+        "detail": "backend.backend.scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nenv = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = env('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = env.list(",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "env",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = env('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = env.list(\n    \"ALLOWED_HOSTS\",",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "SECRET_KEY = env('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = env.list(\n    \"ALLOWED_HOSTS\",\n    default=[]\n)\n# Application definition\nINSTALLED_APPS = [\n    'daphne',",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = env.list(\n    \"ALLOWED_HOSTS\",\n    default=[]\n)\n# Application definition\nINSTALLED_APPS = [\n    'daphne',\n    'channels',\n    'django.contrib.admin',",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "ALLOWED_HOSTS = env.list(\n    \"ALLOWED_HOSTS\",\n    default=[]\n)\n# Application definition\nINSTALLED_APPS = [\n    'daphne',\n    'channels',\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'daphne',\n    'channels',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n     \"DEFAULT_THROTTLE_CLASSES\": [\n        \"rest_framework.throttling.AnonRateThrottle\",\n        \"rest_framework.throttling.UserRateThrottle\",\n    ],\n    \"DEFAULT_THROTTLE_RATES\": {\n        \"anon\": \"20/min\",",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=15),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": True,\n    \"BLACKLIST_AFTER_ROTATION\": True,\n    \"UPDATE_LAST_LOGIN\": False,\n    \"ALGORITHM\": \"HS256\",\n    \"VERIFYING_KEY\": \"\",\n    \"AUDIENCE\": None,\n    \"ISSUER\": None,",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n]",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "ROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ASGI_APPLICATION",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "ASGI_APPLICATION = 'backend.asgi.application'\nWSGI_APPLICATION = 'backend.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'backend.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = 'media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = 'media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = 'media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = env.list(",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = 'media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\",",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nMEDIA_URL = 'media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=[]\n)\nCORS_ALLOW_CREDENTIALS = True",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "MEDIA_URL = 'media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=[]\n)\nCORS_ALLOW_CREDENTIALS = True\nredis_host = env.str(\"REDIS_HOST\", default=None)",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=[]\n)\nCORS_ALLOW_CREDENTIALS = True\nredis_host = env.str(\"REDIS_HOST\", default=None)\nredis_port = env.str(\"REDIS_PORT\", default=None)\nif redis_host and redis_port:\n    redis_url = f\"redis://{redis_host}:{redis_port}/0\"",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=[]\n)\nCORS_ALLOW_CREDENTIALS = True\nredis_host = env.str(\"REDIS_HOST\", default=None)\nredis_port = env.str(\"REDIS_PORT\", default=None)\nif redis_host and redis_port:\n    redis_url = f\"redis://{redis_host}:{redis_port}/0\"\n    CHANNEL_LAYERS = {",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_CREDENTIALS",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nredis_host = env.str(\"REDIS_HOST\", default=None)\nredis_port = env.str(\"REDIS_PORT\", default=None)\nif redis_host and redis_port:\n    redis_url = f\"redis://{redis_host}:{redis_port}/0\"\n    CHANNEL_LAYERS = {\n        \"default\": {\n            \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n            \"CONFIG\": {\n                \"hosts\": [redis_url],",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "redis_host",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "redis_host = env.str(\"REDIS_HOST\", default=None)\nredis_port = env.str(\"REDIS_PORT\", default=None)\nif redis_host and redis_port:\n    redis_url = f\"redis://{redis_host}:{redis_port}/0\"\n    CHANNEL_LAYERS = {\n        \"default\": {\n            \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n            \"CONFIG\": {\n                \"hosts\": [redis_url],\n            },",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "redis_port",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "redis_port = env.str(\"REDIS_PORT\", default=None)\nif redis_host and redis_port:\n    redis_url = f\"redis://{redis_host}:{redis_port}/0\"\n    CHANNEL_LAYERS = {\n        \"default\": {\n            \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n            \"CONFIG\": {\n                \"hosts\": [redis_url],\n            },\n        },",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_ACCEPT_CONTENT",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = \"UTC\"\n#schduler\nCELERY_BEAT_SCHEDULE = SCHEDULE\nCELERY_BEAT_SCHEDULER = \"django_celery_beat.schedulers:DatabaseScheduler\"",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TASK_SERIALIZER",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = \"UTC\"\n#schduler\nCELERY_BEAT_SCHEDULE = SCHEDULE\nCELERY_BEAT_SCHEDULER = \"django_celery_beat.schedulers:DatabaseScheduler\"",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_SERIALIZER",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = \"UTC\"\n#schduler\nCELERY_BEAT_SCHEDULE = SCHEDULE\nCELERY_BEAT_SCHEDULER = \"django_celery_beat.schedulers:DatabaseScheduler\"",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TIMEZONE",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CELERY_TIMEZONE = \"UTC\"\n#schduler\nCELERY_BEAT_SCHEDULE = SCHEDULE\nCELERY_BEAT_SCHEDULER = \"django_celery_beat.schedulers:DatabaseScheduler\"",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BEAT_SCHEDULE",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CELERY_BEAT_SCHEDULE = SCHEDULE\nCELERY_BEAT_SCHEDULER = \"django_celery_beat.schedulers:DatabaseScheduler\"",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BEAT_SCHEDULER",
+        "kind": 5,
+        "importPath": "backend.backend.settings",
+        "description": "backend.backend.settings",
+        "peekOfCode": "CELERY_BEAT_SCHEDULER = \"django_celery_beat.schedulers:DatabaseScheduler\"",
+        "detail": "backend.backend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "backend.backend.urls",
+        "description": "backend.backend.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/', include('api.urls')),\n]\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "detail": "backend.backend.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "backend.backend.wsgi",
+        "description": "backend.backend.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "backend.backend.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len('Scripts') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len('Scripts') - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = '' or os.path.basename(base)\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in '..\\\\Lib\\\\site-packages'.split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if '' else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "backend.env.Scripts.activate_this",
+        "description": "backend.env.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "backend.env.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "TasksConfig",
+        "kind": 6,
+        "importPath": "backend.tasks.apps",
+        "description": "backend.tasks.apps",
+        "peekOfCode": "class TasksConfig(AppConfig):\n    name = 'tasks'\n    def ready(self):\n        test_task.delay()",
+        "detail": "backend.tasks.apps",
+        "documentation": {}
+    },
+    {
+        "label": "test_task",
+        "kind": 2,
+        "importPath": "backend.tasks.tasks",
+        "description": "backend.tasks.tasks",
+        "peekOfCode": "def test_task():\n    print(\"Scheduler running:\", datetime.now())",
+        "detail": "backend.tasks.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "WebsocketConfig",
+        "kind": 6,
+        "importPath": "backend.websocket.apps",
+        "description": "backend.websocket.apps",
+        "peekOfCode": "class WebsocketConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'websocket'",
+        "detail": "backend.websocket.apps",
+        "documentation": {}
+    },
+    {
+        "label": "MyWebSocketConsumer",
+        "kind": 6,
+        "importPath": "backend.websocket.consumers",
+        "description": "backend.websocket.consumers",
+        "peekOfCode": "class MyWebSocketConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.id = self.scope['url_route']['kwargs']['id']\n        await self.channel_layer.group_add(\n            f'group_{self.id}',\n            self.channel_name\n        )\n        await self.accept()\n        await self.send(text_data=json.dumps({\n            'message': 'WebSocket connection established'",
+        "detail": "backend.websocket.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "websocket_urlpatterns",
+        "kind": 5,
+        "importPath": "backend.websocket.routing",
+        "description": "backend.websocket.routing",
+        "peekOfCode": "websocket_urlpatterns = [\n    path('ws/some_path/<str:id>/', consumers.MyWebSocketConsumer.as_asgi()),\n]",
+        "detail": "backend.websocket.routing",
+        "documentation": {}
+    },
+    {
+        "label": "base_path",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "base_path = os.path.join(\"api\")\n# Make sure the api folder exists\nif not os.path.exists(base_path):\n    os.makedirs(base_path)\n    print(f\"Created base API folder: {base_path}\")\n# Ask for the folder name\nfolder_name = input(\"Enter the folder name: \").strip()\n# Full path to the new folder\nfolder_path = os.path.join(base_path, folder_name)\n# Create the folder if it doesn't exist",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "folder_name",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "folder_name = input(\"Enter the folder name: \").strip()\n# Full path to the new folder\nfolder_path = os.path.join(base_path, folder_name)\n# Create the folder if it doesn't exist\nif not os.path.exists(folder_path):\n    os.makedirs(folder_path)\n    print(f\"Created folder: {folder_path}\")\nelse:\n    print(f\"Folder '{folder_path}' already exists.\")\n# List of files to create inside the new folder",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "folder_path",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "folder_path = os.path.join(base_path, folder_name)\n# Create the folder if it doesn't exist\nif not os.path.exists(folder_path):\n    os.makedirs(folder_path)\n    print(f\"Created folder: {folder_path}\")\nelse:\n    print(f\"Folder '{folder_path}' already exists.\")\n# List of files to create inside the new folder\nfiles = [\"models.py\", \"views.py\", \"serializers.py\", \"urls.py\"]\nfor file in files:",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "files",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "files = [\"models.py\", \"views.py\", \"serializers.py\", \"urls.py\"]\nfor file in files:\n    file_path = os.path.join(folder_path, file)\n    if not os.path.exists(file_path):\n        with open(file_path, \"w\") as f:\n            if file == \"urls.py\":\n                # Initialize urls.py with basic structure\n                f.write(\n                    \"from django.urls import path\\n\\nurlpatterns = [\\n    # Add your paths here\\n]\\n\"\n                )",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "parent_models",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "parent_models = os.path.join(base_path, \"models.py\")\nimport_line = f\"from .{folder_name}.models import *\\n\"\nif os.path.exists(parent_models):\n    with open(parent_models, \"a\") as f:\n        f.write(import_line)\n    print(f\"Updated {parent_models} to import from {folder_name}.models\")\nelse:\n    with open(parent_models, \"w\") as f:\n        f.write(import_line)\n    print(f\"Created {parent_models} with import from {folder_name}.models\")",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "import_line",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "import_line = f\"from .{folder_name}.models import *\\n\"\nif os.path.exists(parent_models):\n    with open(parent_models, \"a\") as f:\n        f.write(import_line)\n    print(f\"Updated {parent_models} to import from {folder_name}.models\")\nelse:\n    with open(parent_models, \"w\") as f:\n        f.write(import_line)\n    print(f\"Created {parent_models} with import from {folder_name}.models\")\n# Update parent urls.py inside /backend/api to include the new folder",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "parent_urls",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "parent_urls = os.path.join(base_path, \"urls.py\")\ninclude_line = f\"    path('{folder_name}/', include('api.{folder_name}.urls')),\\n\"\nif os.path.exists(parent_urls):\n    # Check if 'urlpatterns' exists in the file\n    with open(parent_urls, \"r\") as f:\n        content = f.read()\n    if \"urlpatterns\" not in content:\n        content += \"\\nfrom django.urls import path, include\\n\\nurlpatterns = [\\n]\\n\"\n    # Append the new include line inside urlpatterns\n    if include_line not in content:",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "include_line",
+        "kind": 5,
+        "importPath": "backend.create_feature",
+        "description": "backend.create_feature",
+        "peekOfCode": "include_line = f\"    path('{folder_name}/', include('api.{folder_name}.urls')),\\n\"\nif os.path.exists(parent_urls):\n    # Check if 'urlpatterns' exists in the file\n    with open(parent_urls, \"r\") as f:\n        content = f.read()\n    if \"urlpatterns\" not in content:\n        content += \"\\nfrom django.urls import path, include\\n\\nurlpatterns = [\\n]\\n\"\n    # Append the new include line inside urlpatterns\n    if include_line not in content:\n        content = content.replace(\"]\\n\", f\"{include_line}]\\n\")",
+        "detail": "backend.create_feature",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "backend.manage",
+        "description": "backend.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "backend.manage",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    }
+]
