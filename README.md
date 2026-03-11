@@ -72,32 +72,6 @@ python manage.py runserver
 
 ---
 
-## Folder Structure
-
-```text
-frontend/
-  src/
-    pages/       ← renamed from Pages
-    context/     ← renamed from Contexts
-    components/
-    redux/
-    services/
-backend/
-  api/
-    user/
-      models/
-      views/
-      serializers/
-      urls.py
-  backend/
-    settings.py
-    urls.py
-    asgi.py
-    wsgi.py
-```
-
----
-
 ## Usage
 
 - Choose branch according to app size.
