@@ -6,8 +6,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import DashBoard from "./pages/DashBoard";
 
-import PrivateRoutes from "./contexts/PrivateRoutes";
+import PrivateRoutes from "./context/PrivateRoutes";
 import { updateToken } from "./utils/auth";
+import ForgotPasswordPage from "./pages/ForgotPassword";
 
 
 function AppContent() {
@@ -34,6 +35,7 @@ function AppContent() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgot_password" element={<ForgotPasswordPage />} />
 
         <Route element={<PrivateRoutes />}>
           <Route path="/" element={<DashBoard />} />

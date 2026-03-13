@@ -49,6 +49,9 @@ function Login() {
             <a href="/register" className="text-cyan-500 hover:underline">
               Register
             </a>
+            <a href="/forgot_password" className="text-cyan-500 hover:underline">
+              Forgot Password
+            </a>
           </p>
         </div>
       </div>
