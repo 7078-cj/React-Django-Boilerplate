@@ -64,7 +64,7 @@ REST_FRAMEWORK = {
 
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-     "DEFAULT_THROTTLE_CLASSES": [
+    "DEFAULT_THROTTLE_CLASSES": [
         "rest_framework.throttling.AnonRateThrottle",
         "rest_framework.throttling.UserRateThrottle",
     ],
@@ -154,12 +154,42 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# =========================
+# DATABASE CONFIG (PG → SQLite fallback)
+# =========================
+
+PG_NAME = env.str("PG_NAME", default=None)
+PG_USER = env.str("PG_USER", default=None)
+PG_PASSWORD = env.str("PG_PASSWORD", default=None)
+PG_HOST = env.str("PG_HOST", default=None)
+PG_PORT = env.str("PG_PORT", default=None)
+
+use_postgres = all([
+    PG_NAME,
+    PG_USER,
+    PG_PASSWORD,
+    PG_HOST,
+    PG_PORT
+])
+
+if use_postgres:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": PG_NAME,
+            "USER": PG_USER,
+            "PASSWORD": PG_PASSWORD,
+            "HOST": PG_HOST,
+            "PORT": PG_PORT,
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 
 # Password validation
