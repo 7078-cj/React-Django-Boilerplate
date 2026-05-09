@@ -40,7 +40,7 @@ python manage.py migrate
 
 ---
 
-# 9. Test Connection
+# 4. Test Connection
 
 Run server:
 
@@ -50,9 +50,16 @@ python manage.py runserver
 
 ---
 
-# 10. Manual DB Test (Optional but recommended)
+# 5. Manual DB Test (Optional but recommended)
 
 ```bash
 psql -U myuser -d myproject -h localhost
+```
+---
+
+# 6. Running all the 3 needed terminals
+
+```bash
+CTRL + SHIFT + B
 ```
 ---
