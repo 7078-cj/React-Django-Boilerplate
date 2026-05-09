@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+        "label": "psql",
+        "type": "shell",
+        "command": "psql -U postgres",
+        "presentation": { "panel": "new", "name": "psql" }
+        },
+        {
+        "label": "backend",
+        "type": "shell",
+        "command": "cd backend; env\\Scripts\\activate; py manage.py runserver",
+        "presentation": { "panel": "new", "name": "backend" }
+        },
+        {
+        "label": "frontend",
+        "type": "shell",
+        "command": "cd frontend; npm run dev",
+        "presentation": { "panel": "new", "name": "frontend" }
+        },
+        {
+        "label": "Start All",
+        "dependsOn": ["psql", "backend", "frontend"],
+        "dependsOrder": "parallel",
+        "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
