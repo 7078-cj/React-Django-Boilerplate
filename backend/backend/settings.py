@@ -14,6 +14,8 @@ from pathlib import Path
 from datetime import timedelta
 import environ
 import os
+import ctypes.util
+import subprocess
 from celery.schedules import crontab
 from .scheduler import SCHEDULE
 
@@ -37,8 +39,61 @@ ALLOWED_HOSTS = env.list(
     default=[]
 )
 
+# =========================
+# GDAL AUTO-DETECT
+# =========================
 
-# Application definition
+def find_gdal():
+    # 1. Respect explicit env var if set (.env or system)
+    explicit = os.environ.get('GDAL_PATH')
+    if explicit:
+        return explicit
+
+    # 2. Try to find it automatically (Linux/Mac)
+    lib = ctypes.util.find_library('gdal')
+    if lib:
+        return lib
+
+    # 3. Fallback: ask ldconfig (Linux only)
+    try:
+        output = subprocess.check_output(
+            ['ldconfig', '-p'], stderr=subprocess.DEVNULL
+        ).decode()
+        for line in output.splitlines():
+            if 'libgdal' in line:
+                return line.split('=>')[-1].strip()
+    except Exception:
+        pass
+
+    return None  # Let Django handle it or raise its own error
+
+def find_geos():
+    explicit = os.environ.get('GEOS_LIBRARY_PATH')
+    if explicit:
+        return explicit
+
+    lib = ctypes.util.find_library('geos_c')
+    if lib:
+        return lib
+
+    try:
+        output = subprocess.check_output(
+            ['ldconfig', '-p'], stderr=subprocess.DEVNULL
+        ).decode()
+        for line in output.splitlines():
+            if 'libgeos_c' in line:
+                return line.split('=>')[-1].strip()
+    except Exception:
+        pass
+
+    return None
+
+GDAL_LIBRARY_PATH = find_gdal()
+GEOS_LIBRARY_PATH = find_geos()
+
+# =========================
+# APPLICATION DEFINITION
+# =========================
 
 INSTALLED_APPS = [
     'daphne',
@@ -55,13 +110,12 @@ INSTALLED_APPS = [
     'websocket',
     'corsheaders',
     'tasks',
-    'django_celery_beat'    
+    'django_celery_beat',
+    "django.contrib.gis",
 ]
 
 REST_FRAMEWORK = {
-
     'DEFAULT_AUTHENTICATION_CLASSES': (
-
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     "DEFAULT_THROTTLE_CLASSES": [
@@ -73,7 +127,6 @@ REST_FRAMEWORK = {
         "user": "100/min",
     },
     "UPLOADED_FILE_USER_URL": False
-
 }
 
 SIMPLE_JWT = {
@@ -114,8 +167,7 @@ SIMPLE_JWT = {
     "TOKEN_BLACKLIST_SERIALIZER": "rest_framework_simplejwt.serializers.TokenBlacklistSerializer",
     "SLIDING_TOKEN_OBTAIN_SERIALIZER": "rest_framework_simplejwt.serializers.TokenObtainSlidingSerializer",
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
-} 
-
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -147,15 +199,10 @@ TEMPLATES = [
 ]
 
 ASGI_APPLICATION = 'backend.asgi.application'
-
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 # =========================
-# DATABASE CONFIG (PG → SQLite fallback)
+# DATABASE CONFIG (PostGIS → PostgreSQL → SQLite fallback)
 # =========================
 
 PG_NAME = env.str("PG_NAME", default=None)
@@ -163,19 +210,15 @@ PG_USER = env.str("PG_USER", default=None)
 PG_PASSWORD = env.str("PG_PASSWORD", default=None)
 PG_HOST = env.str("PG_HOST", default=None)
 PG_PORT = env.str("PG_PORT", default=None)
+USE_POSTGIS = env.bool("USE_POSTGIS", default=False)
 
-use_postgres = all([
-    PG_NAME,
-    PG_USER,
-    PG_PASSWORD,
-    PG_HOST,
-    PG_PORT
-])
+use_postgres = all([PG_NAME, PG_USER, PG_PASSWORD, PG_HOST, PG_PORT])
 
 if use_postgres:
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.postgresql",
+            # Use postgis engine if USE_POSTGIS=True, else plain postgres
+            "ENGINE": "django.contrib.gis.db.backends.postgis" if USE_POSTGIS else "django.db.backends.postgresql",
             "NAME": PG_NAME,
             "USER": PG_USER,
             "PASSWORD": PG_PASSWORD,
@@ -191,63 +234,53 @@ else:
         }
     }
 
-
-# Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
+# =========================
+# PASSWORD VALIDATION
+# =========================
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
+# =========================
+# INTERNATIONALIZATION
+# =========================
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
+# =========================
+# STATIC & MEDIA
+# =========================
 
 STATIC_URL = 'static/'
-
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = env.list(
-    "CORS_ALLOWED_ORIGINS",
-    default=[]
-)
+# =========================
+# CORS
+# =========================
+
+CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=[])
 CORS_ALLOW_CREDENTIALS = True
+
+# =========================
+# REDIS / CHANNELS / CELERY / CACHE
+# =========================
 
 redis_host = env.str("REDIS_HOST", default=None)
 redis_port = env.str("REDIS_PORT", default=None)
 
 if redis_host and redis_port:
     redis_url = f"redis://{redis_host}:{redis_port}/0"
-    
+
     CHANNEL_LAYERS = {
         "default": {
             "BACKEND": "channels_redis.core.RedisChannelLayer",
@@ -256,26 +289,22 @@ if redis_host and redis_port:
             },
         },
     }
-    
+
     CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", default=redis_url)
     CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", default=redis_url)
-    
     CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 
-    # Add Django cache configuration using Redis
     CACHES = {
         "default": {
             "BACKEND": "django_redis.cache.RedisCache",
             "LOCATION": redis_url,
             "OPTIONS": {
                 "CLIENT_CLASS": "django_redis.client.DefaultClient",
-                # Optional: compression, password, socket timeout, etc.
             }
         }
     }
 
 else:
-    # Fallback to in-memory channel layer
     CHANNEL_LAYERS = {
         "default": {
             "BACKEND": "channels.layers.InMemoryChannelLayer"
@@ -283,30 +312,30 @@ else:
     }
     CELERY_TASK_ALWAYS_EAGER = True
     CELERY_TASK_STORE_EAGER_RESULT = False
-
-    # Use local-memory cache fallback
     CACHES = {
         "default": {
             "BACKEND": "django.core.cache.backends.locmem.LocMemCache"
         }
     }
-    
 
-
+# =========================
+# CELERY
+# =========================
 
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = "UTC"
-
-#schduler
 CELERY_BEAT_SCHEDULE = SCHEDULE
 CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 
+# =========================
+# EMAIL
+# =========================
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = env('EMAIL_HOST_USER' )
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
