@@ -1,8 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Cookie } from "../../utils/cookies";
 
 const initialState = {
-    tokens: JSON.parse(localStorage.getItem("authTokens")) || null,
-    user: JSON.parse(localStorage.getItem("user")) || null,
+    access: Cookie.get("access") || null,
+    refresh: Cookie.get("refresh") || null,
+    user: Cookie.get("user")
+        ? JSON.parse(Cookie.get("user"))
+        : null,
 };
 
 const authSlice = createSlice({
@@ -10,14 +14,27 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         setAuth(state, action) {
-            state.tokens = action.payload.tokens;
-            state.user = action.payload.user;
+            const { tokens, user } = action.payload;
+
+            state.access = tokens.access;
+            state.refresh = tokens.refresh;
+            state.user = user;
+
+            Cookie.set("access", tokens.access, 540000);
+            Cookie.set("refresh", tokens.refresh, 604800);
+            Cookie.set("user", JSON.stringify(user), 604800);
         },
+
         logout(state) {
-            state.tokens = null;
+            state.access = null;
+            state.refresh = null;
             state.user = null;
-        }
-    }
+
+            Cookie.delete("access");
+            Cookie.delete("refresh");
+            Cookie.delete("user");
+        },
+    },
 });
 
 export const { setAuth, logout } = authSlice.actions;

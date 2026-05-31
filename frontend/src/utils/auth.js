@@ -1,105 +1,105 @@
 import { jwtDecode } from "jwt-decode";
 import { setAuth, logout } from "../features/auth/authSlice";
+import { getRequest } from "./requests";
+import { Cookie } from "./cookies";
+import { validateLoginFields } from "./validation";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+/** Clear session and send the user to the login screen. */
+export const logoutUser = (dispatch, navigate) => {
+    dispatch(logout());
 
-export const loginUser = async (e, dispatch, navigate) => {
+    navigate("/login", { replace: true });
+};
+
+export const loginUser = async (e, dispatch, navigate,setError) => {
     e.preventDefault();
 
-    const response = await fetch(API_URL + "user/token/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            username: e.target.username.value,
-            password: e.target.password.value
-        }),
-    });
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+    const { valid, errors } = validateLoginFields(username, password);
+    if (!valid) {
+        const first = Object.values(errors)[0];
+        setError(first);
+        return false;
+    }
 
-    const data = await response.json();
+    try {
+        const response = await fetch(API_URL + "user/token/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                username: username.trim(),
+                password,
+            }),
+        });
+        if (response.status === 401) {
+            setError("Invalid username or password.");
+            return false;
+        }
 
-    if (response.ok) {
+        const data = await response.json().catch(() => ({}));
 
-        const user = jwtDecode(data.access);
+        const tokens = data;
+        const user = jwtDecode(tokens.access);
 
-        dispatch(setAuth({
-            tokens: data,
-            user: user
-        }));
+        dispatch(
+            setAuth({
+                tokens: tokens,
+                user: user,
+            })
+        );
 
-        localStorage.setItem("authTokens", JSON.stringify(data));
-        localStorage.setItem("user", JSON.stringify(user));
+        Cookie.set("access", tokens.access, 540000);
+        Cookie.set("refresh", tokens.refresh, 604800);
 
         navigate("/");
+        return true;
+    } catch (error) {
+        console.error("Error during login:", error);
+        return false;
     }
 };
 
-export const registerUser = async (e, dispatch, nav) =>{
-        e.preventDefault();
-        const url = import.meta.env.VITE_API_URL
-
-        let response = await fetch(
-          `${url}user/register/`,{
-            method: "POST",
-            headers:{
-              'Content-Type' : 'application/json',
-             
-            },
-            body :JSON.stringify({
-                                  'username' :e.target.username.value,
-                                    'email':e.target.email.value,
-                                  'password' :e.target.password.value,
-                                  
-                                  })
-          }
-        )
-                
-        if (response.status == 201){
-            loginUser(e,dispatch,nav)
-        }
-    }
-
 
 export const updateToken = async (dispatch) => {
+    const refresh = Cookie.get("refresh");
 
-    const authTokens = JSON.parse(localStorage.getItem("authTokens"));
-
-    if (!authTokens) return;
+    if (!refresh) return;
 
     const response = await fetch(API_URL + "user/token/refresh/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-            refresh: authTokens.refresh
-        }),
+        body: JSON.stringify({ refresh }),
     });
 
     const data = await response.json();
 
     if (response.ok) {
+        const newAccess = data.access;
 
-        const user = jwtDecode(data.access);
+        const user = await getRequest("user/profile/", newAccess);
 
         const newTokens = {
-            access: data.access,
-            refresh: authTokens.refresh
+            access: newAccess,
+            refresh: refresh,
         };
 
-        dispatch(setAuth({
-            tokens: newTokens,
-            user: user
-        }));
+        dispatch(
+            setAuth({
+                tokens: newTokens,
+                user: user,
+            })
+        );
 
-        localStorage.setItem("authTokens", JSON.stringify(newTokens));
-        localStorage.setItem("user", JSON.stringify(user));
-
+        Cookie.set("access", newAccess, 540000);
+        Cookie.set("refresh", refresh, 604800);
     } else {
         dispatch(logout());
-        localStorage.removeItem("authTokens");
-        localStorage.removeItem("user");
     }
 };
